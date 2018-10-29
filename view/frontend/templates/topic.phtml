@@ -1,0 +1,9 @@
+<h1>Topics</h1>
+<ul>
+<?php
+foreach ($this->getPostCollection() as $item) {
+    $dateString = $item['date'] ? ' at ' . $item->getConvertedDate('Y-m-d H:i:s (e)') : '';
+    echo '<li>' . $item->getMessage() . $dateString . '</li>';
+}
+?>
+</ul>

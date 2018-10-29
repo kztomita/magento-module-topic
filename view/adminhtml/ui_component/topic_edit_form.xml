@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <argument name="data" xsi:type="array">
+        <item name="js_config" xsi:type="array">
+            <item name="provider" xsi:type="string">topic_edit_form.topic_edit_form_data_source</item>
+        </item>
+        <item name="label" xsi:type="string" translate="true">Topic Information</item>
+        <item name="template" xsi:type="string">templates/form/collapsible</item>
+    </argument>
+    <settings>
+        <buttons>
+            <button name="save" class="BitHive\Topic\Block\Adminhtml\Edit\SaveButton"/>
+	    <button name="back" class="BitHive\Topic\Block\Adminhtml\Edit\BackButton"/>
+        </buttons>
+        <namespace>topic_edit_form</namespace>
+        <dataScope>data</dataScope>
+        <deps>
+            <dep>topic_edit_form.topic_edit_form_data_source</dep>
+        </deps>
+    </settings>
+    <dataSource name="topic_edit_form_data_source" component="Magento_Ui/js/form/provider">
+        <settings>
+            <submitUrl path="topic/posts/save"/>
+        </settings>
+        <dataProvider class="BitHive\Topic\Model\DataProvider" name="topic_edit_form_data_source">
+            <settings>
+                <requestFieldName>id</requestFieldName>
+                <primaryFieldName>post_id</primaryFieldName>
+            </settings>
+        </dataProvider>
+    </dataSource>
+    <fieldset name="post_details">
+        <settings>
+            <collapsible>false</collapsible>
+            <label translate="true">Post Details</label>
+        </settings>
+        <field name="message" formElement="input">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="source" xsi:type="string">posts</item>
+                </item>
+            </argument>
+	    <settings>
+                <validation>
+                    <rule name="required-entry" xsi:type="boolean">true</rule>
+                    <rule name="max_text_length" xsi:type="number">255</rule>
+                </validation>
+                <dataType>text</dataType>
+                <dataScope>message</dataScope>
+                <label translate="true">Message</label>
+            </settings>
+        </field>
+        <field name="date" formElement="input">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="source" xsi:type="string">posts</item>
+                </item>
+            </argument>
+            <settings>
+                <dataType>datetime</dataType>
+                <dataScope>date</dataScope>
+                <label translate="true">Date</label>
+            </settings>
+        </field>
+    </fieldset>
+</form>

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <title>
+            Posts
+        </title>
+    </head>
+    <body>
+        <referenceContainer name="content">
+            <!-- 外部のテンプレートファイルを読み込みview/adminhtml/templates/posts.htmlを参照 -->
+            <block class="Magento\Backend\Block\Template" template="BitHive_Topic::posts.phtml"/>
+            <!-- -view/adminhtml/ui_component/topic_listing.xmlを参照 -->
+            <uiComponent name="topic_listing"/>
+        </referenceContainer>
+    </body>
+</page>

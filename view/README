@@ -1,0 +1,7 @@
+layoutファイルの置き方
+
+[置き場所]
+./view/{area}/layout/
+
+[ファイル名]
+{router_id}_{controller_name}_{action_name}.xml

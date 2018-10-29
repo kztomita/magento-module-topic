@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
+    <router id="admin">
+        <!--
+         idは通常frontNameと同じものを指定する。
+         -->
+        <route frontName="topic" id="topic">
+            <module name="BitHive_Topic"/>
+        </route>
+    </router>
+</config>

@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="BitHive_Topic::topic" title="Topic" module="BitHive_Topic" sortOrder="51" resource="BitHive_Topic::topic"/>
+        <add id="BitHive_Topic::posts" title="Posts" module="BitHive_Topic" sortOrder="10" action="topic/posts" resource="BitHive_Topic::list" parent="BitHive_Topic::topic"/>
+    </menu>
+</config>
