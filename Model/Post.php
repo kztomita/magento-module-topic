@@ -28,17 +28,17 @@ class Post extends \Magento\Framework\Model\AbstractModel implements \Magento\Fr
         parent::__construct($context, $registry);
     }
 
-	protected function _construct()
-	{
+    protected function _construct()
+    {
         // ResouceModelのクラス名
-		$this->_init(\BitHive\Topic\Model\ResourceModel\Post::class);
-	}
+        $this->_init(\BitHive\Topic\Model\ResourceModel\Post::class);
+    }
 
     // IdentityInterfaceのメソッド
-	public function getIdentities()
-	{
-		return [self::CACHE_TAG . '_' . $this->getId()];
-	}
+    public function getIdentities()
+    {
+        return [self::CACHE_TAG . '_' . $this->getId()];
+    }
 
     public function beforeSave()
     {

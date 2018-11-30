@@ -3,25 +3,25 @@ namespace BitHive\Topic\Controller\Adminhtml\Posts;
 
 class Index extends \Magento\Backend\App\Action
 {
-	protected $pageFactory;
-	protected $postFactory;
+    protected $pageFactory;
+    protected $postFactory;
 
-	public function __construct(
-		\Magento\Backend\App\Action\Context $context,
-		\Magento\Framework\View\Result\PageFactory $pageFactory,
+    public function __construct(
+        \Magento\Backend\App\Action\Context $context,
+        \Magento\Framework\View\Result\PageFactory $pageFactory,
         \BitHive\Topic\Model\PostFactory $postFactory)
-	{
-		$this->pageFactory = $pageFactory;
+    {
+        $this->pageFactory = $pageFactory;
         // PostFactoryクラスはModel名+Factoryで自動生成されるクラス
-		$this->postFactory = $postFactory;
-		return parent::__construct($context);
-	}
+        $this->postFactory = $postFactory;
+        return parent::__construct($context);
+    }
 
-	public function execute()
-	{
+    public function execute()
+    {
         //return $this->dumpCollection();
         return $this->viewTemplate();
-	}
+    }
 
     private function dumpCollection()
     {
