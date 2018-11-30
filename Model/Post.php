@@ -9,9 +9,9 @@ class Post extends \Magento\Framework\Model\AbstractModel implements \Magento\Fr
 {
     const CACHE_TAG = 'bithive_topic_post';
 
-	protected $_cacheTag = 'bithive_topic_post';
+    protected $_cacheTag = 'bithive_topic_post';
 
-	protected $_eventPrefix = 'bithive_topic_post';
+    protected $_eventPrefix = 'bithive_topic_post';
 
     /**
      * @var \Magento\Framework\Stdlib\DateTime\TimezoneInterface
