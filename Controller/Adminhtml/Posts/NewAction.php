@@ -5,13 +5,13 @@ class NewAction extends \Magento\Backend\App\Action
 {
     protected $resultForwardFactory;
 
-	public function __construct(
-		\Magento\Backend\App\Action\Context $context,
+    public function __construct(
+        \Magento\Backend\App\Action\Context $context,
         \Magento\Backend\Model\View\Result\ForwardFactory $resultForwardFactory)
-	{
-		$this->resultForwardFactory = $resultForwardFactory;
-		return parent::__construct($context);
-	}
+    {
+        $this->resultForwardFactory = $resultForwardFactory;
+        return parent::__construct($context);
+    }
 
 	public function execute()
     {
