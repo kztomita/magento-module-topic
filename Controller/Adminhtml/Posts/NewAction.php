@@ -13,7 +13,7 @@ class NewAction extends \Magento\Backend\App\Action
         return parent::__construct($context);
     }
 
-	public function execute()
+    public function execute()
     {
         $resultForward = $this->resultForwardFactory->create();
         return $resultForward->forward('edit');
