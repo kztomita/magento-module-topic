@@ -9,24 +9,24 @@ class Save extends \Magento\Backend\App\Action
     protected $timezone;
     protected $timezoneHelper;
 
-	public function __construct(
-		\Magento\Backend\App\Action\Context $context,
-		\Magento\Framework\View\Result\PageFactory $pageFactory,
+    public function __construct(
+        \Magento\Backend\App\Action\Context $context,
+        \Magento\Framework\View\Result\PageFactory $pageFactory,
         \BitHive\Topic\Model\PostFactory $postFactory,
         \Magento\Framework\App\Request\DataPersistorInterface $dataPersistor,
         \Magento\Framework\Stdlib\DateTime\TimezoneInterface $timezone,
         \BitHive\Topic\Helper\Timezone $timezoneHelper
     )
-	{
-		$this->pageFactory = $pageFactory;
-		$this->postFactory = $postFactory;
+    {
+        $this->pageFactory = $pageFactory;
+        $this->postFactory = $postFactory;
         $this->dataPersistor = $dataPersistor;
         $this->timezone = $timezone;
         $this->timezoneHelper = $timezoneHelper;
-		return parent::__construct($context);
-	}
+        return parent::__construct($context);
+    }
 
-	public function execute()
+    public function execute()
     {
         $this->dataPersistor->clear('bithive_topic');
 

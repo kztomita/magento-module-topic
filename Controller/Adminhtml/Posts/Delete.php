@@ -3,20 +3,20 @@ namespace BitHive\Topic\Controller\Adminhtml\Posts;
 
 class Delete extends \Magento\Backend\App\Action
 {
-	protected $pageFactory;
-	protected $postFactory;
+    protected $pageFactory;
+    protected $postFactory;
 
-	public function __construct(
-		\Magento\Backend\App\Action\Context $context,
-		\Magento\Framework\View\Result\PageFactory $pageFactory,
+    public function __construct(
+        \Magento\Backend\App\Action\Context $context,
+        \Magento\Framework\View\Result\PageFactory $pageFactory,
         \BitHive\Topic\Model\PostFactory $postFactory)
-	{
-		$this->pageFactory = $pageFactory;
-		$this->postFactory = $postFactory;
-		return parent::__construct($context);
-	}
+    {
+        $this->pageFactory = $pageFactory;
+        $this->postFactory = $postFactory;
+        return parent::__construct($context);
+    }
 
-	public function execute()
+    public function execute()
     {
         $resultRedirect = $this->resultRedirectFactory->create();
 
