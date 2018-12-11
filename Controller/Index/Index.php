@@ -3,21 +3,21 @@ namespace BitHive\Topic\Controller\Index;
 
 class Index extends \Magento\Framework\App\Action\Action
 {
-	protected $pageFactory;
-	protected $postFactory;
+    protected $pageFactory;
+    protected $postFactory;
 
-	public function __construct(
-		\Magento\Framework\App\Action\Context $context,
-		\Magento\Framework\View\Result\PageFactory $pageFactory,
+    public function __construct(
+        \Magento\Framework\App\Action\Context $context,
+        \Magento\Framework\View\Result\PageFactory $pageFactory,
         \BitHive\Topic\Model\PostFactory $postFactory)
-	{
-		$this->pageFactory = $pageFactory;
-		$this->postFactory = $postFactory;
-		return parent::__construct($context);
-	}
+    {
+        $this->pageFactory = $pageFactory;
+        $this->postFactory = $postFactory;
+        return parent::__construct($context);
+    }
 
-	public function execute()
-	{
+    public function execute()
+    {
         // データの取得はBlockで行う
 /*
         $collection = $this->postFactory->create()->getCollection()
@@ -33,6 +33,6 @@ class Index extends \Magento\Framework\App\Action\Action
         exit;
 */
         return $this->pageFactory->create();
-	}
+    }
 }
 
